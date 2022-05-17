@@ -51,8 +51,7 @@ class OpenOtherAppsTest {
         //Находим в контейнере настройки по названию иконки
         val settingsApp = appViews
             .getChildByText(
-                UiSelector()
-                    .className(TextView::class.java.name),
+                UiSelector().className(TextView::class.java.name),
                 "Settings"
             )
         //Открываем
