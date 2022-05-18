@@ -14,6 +14,7 @@ import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiObject2
 import androidx.test.uiautomator.Until
 import com.geekbrains.tests.R
+import com.geekbrains.tests.TEST_NUMBER
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -79,7 +80,7 @@ class BehaviorTest {
             )
         //Убеждаемся, что сервер вернул корректный результат. Обратите внимание, что количество
         //результатов может варьироваться во времени, потому что количество репозиториев постоянно меняется.
-        Assert.assertEquals(changedText.text.toString(), "Number of results: 42")
+        Assert.assertEquals(changedText.text.toString(), "Number of results: ${TEST_NUMBER}")
     }
 
     //Убеждаемся, что DetailsScreen открывается
