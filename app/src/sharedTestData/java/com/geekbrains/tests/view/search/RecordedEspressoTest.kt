@@ -43,21 +43,7 @@ class RecordedEspressoTest {
             )
         )
         appCompatEditText.perform(replaceText("coro"), closeSoftKeyboard())
-
-        val appCompatEditText2 = onView(
-            allOf(
-                withId(R.id.searchEditText), withText("coro"),
-                childAtPosition(
-                    childAtPosition(
-                        withId(android.R.id.content),
-                        0
-                    ),
-                    1
-                ),
-                isDisplayed()
-            )
-        )
-        appCompatEditText2.perform(pressImeActionButton())
+        appCompatEditText.perform(pressImeActionButton())
 
         val materialButton = onView(
             allOf(
